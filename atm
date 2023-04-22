@@ -1,0 +1,60 @@
+// JavaScript source code
+
+
+let bakiye = 2000
+
+let yeniSatir= "/r/n"
+
+let metin = "1. Bakiye goruntuleme " + yeniSatir
+    + "2.Para cekme " + yeniSatir
+    + "3.Para yatirma " + yeniSatir
+    + "4. Cikis " + yeniSatir
+
+    + "lutfen bir numara seciniz:" + yeniSatir
+
+alert(metin);
+
+let secim = prompt(metin);
+
+switch (secim) {
+    case "1":
+        alert("bakiyeniz : " + bakiye);
+
+        break;
+
+    case "2":
+        let cekilecekTutar = Number(prompt("cekmek isediginiz tutar giriniz: "));
+        if (cekilecekTutar < bakiye) {
+            bakiye = bakiye - cekilecekTutar
+            alert("kalan bakiyeniz:" + bakiye);
+        }
+        else {
+            alert("bakiyenizden fazla tutar cekemezsiniz,tutarı kontrol edip tekrar deneyin..");
+        }
+        break;
+
+    case "3":
+        {
+            let yatiralacakTutar = Number(prompt("yatıralacak tutar giriniz: "));
+            bakiye = bakiye + yatiralacakTutar
+
+            alert("Yeni Bakiyeniz:" + bakiye );
+            break;
+
+
+        }
+    case "4":
+        alert("cıkıs yapılıyor lütfen bekleyiniz..");
+
+
+        break;
+
+
+
+    default:
+        alert("1 ile 4 arasında değer girmelisiniz..");
+
+        break;
+
+
+}
